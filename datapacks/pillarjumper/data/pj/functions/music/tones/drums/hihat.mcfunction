@@ -1,0 +1,1 @@
+playsound minecraft:block.note_block.hat player @s ~ ~ ~ 1 1

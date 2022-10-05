@@ -1,0 +1,3 @@
+# SUMMON THE ITEM [3 / SPIDERNEST]
+summon item ~ ~ ~ {Glowing:1b,CustomName:'{"text": "Spidernest", "color": "aqua", "italic": false}',CustomNameVisible:1b,PickupDelay:0,Tags:["notCollected"],Item:{id:"minecraft:cobweb",Count:1b,tag:{pjItem:["yes","spidernest"],display:{Name:'[{"text": "Spidernest ", "color": "aqua", "italic": false},{"text": "[", "color": "dark_gray"},{"keybind": "key.drop", "color": "dark_gray", "bold": true},{"text": "]", "color": "dark_gray"}]',Lore:['{"text":"creates a spider`s nest on the player","color": "gray","italic": true}']}}}}
+execute as @e[tag=notCollected,distance=..1] run team join powerup

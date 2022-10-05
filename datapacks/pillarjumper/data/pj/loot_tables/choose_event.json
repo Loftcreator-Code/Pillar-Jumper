@@ -1,0 +1,22 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 1,
+				"max": 5
+			},
+			"entries": [
+				{
+					"name": "minecraft:acacia_button",
+					"type": "item",
+					"functions": [
+                                    {
+                                          "function": "set_nbt",
+                                          "tag": "{RNG:1b}"
+                                    }
+                              ]
+				}
+			]
+		}
+	]
+}
