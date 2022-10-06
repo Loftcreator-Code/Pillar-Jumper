@@ -151,7 +151,6 @@ execute if score startani game.data matches 660 as @e[tag=items.marker] at @s ru
 execute if score startani game.data matches 660 as @e[tag=items.marker] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 minecraft:air replace lime_carpet
 execute if score startani game.data matches 660 as @e[tag=items.marker] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 minecraft:air replace white_carpet
 execute if score startani game.data matches 660 as @e[tag=items.marker] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 minecraft:air replace purple_carpet
-execute if score startani game.data matches 660 run function pj:game-engine/reset-map
 execute if score startani game.data matches 660 run function pj:game-engine/summon-marker
 execute if score startani game.data matches 660 run scoreboard objectives remove game.event
 execute if score startani game.data matches 660 run scoreboard objectives add game.event dummy

@@ -15,6 +15,7 @@ scoreboard objectives add game.info.count dummy
 scoreboard objectives add game.config dummy
 scoreboard objectives add game.event dummy
 scoreboard objectives add game.savegoal dummy
+scoreboard objectives add game.height dummy
 
 scoreboard objectives add start trigger
 scoreboard objectives add stop trigger
@@ -91,7 +92,6 @@ execute unless score day.trigger game.config matches 1 run scoreboard players se
 
 # GAMERULES
 gamerule fallDamage false
-gamerule sendCommandFeedback false
 
 # CONFIG SIGNS
 setblock -287 70 151 crimson_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"text":"Free for all","clickEvent":{"action":"run_command","value":"scoreboard players add teams.trigger game.config 1"}}',Text4:'{"text":"Teams"}'}

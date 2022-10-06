@@ -11,6 +11,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/prismarine": {
+    "criteria": {
+      "has_prismarine_shard": "2022-10-05 20:19:31 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/prismarine_bricks": {
+    "criteria": {
+      "has_prismarine_shard": "2022-10-05 20:19:31 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/brewing/blaze_powder": {
     "criteria": {
       "has_blaze_rod": "2022-10-04 22:08:30 +0200"
@@ -28,6 +40,12 @@
       "minecraft:beach": "2022-10-04 21:49:48 +0200"
     },
     "done": false
+  },
+  "minecraft:recipes/building_blocks/dark_prismarine": {
+    "criteria": {
+      "has_prismarine_shard": "2022-10-05 20:19:31 +0200"
+    },
+    "done": true
   },
   "DataVersion": 3120
 }

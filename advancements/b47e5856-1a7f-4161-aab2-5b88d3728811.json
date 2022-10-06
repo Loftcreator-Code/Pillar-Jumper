@@ -443,6 +443,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/jungle_chest_boat": {
+    "criteria": {
+      "has_boat": "2022-10-05 19:33:38 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/white_banner": {
     "criteria": {
       "has_white_wool": "2022-01-30 12:51:31 +0100"
@@ -599,6 +605,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/acacia_chest_boat": {
+    "criteria": {
+      "has_boat": "2022-10-05 19:33:38 +0200"
+    },
+    "done": true
+  },
   "minecraft:story/obtain_armor": {
     "criteria": {
       "iron_helmet": "2022-08-03 17:09:33 +0200"
@@ -614,6 +626,12 @@
   "minecraft:recipes/building_blocks/prismarine_slab": {
     "criteria": {
       "has_prismarine": "2022-09-16 15:55:43 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_chest_boat": {
+    "criteria": {
+      "has_boat": "2022-10-05 19:33:38 +0200"
     },
     "done": true
   },
@@ -821,6 +839,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/dark_oak_chest_boat": {
+    "criteria": {
+      "has_boat": "2022-10-05 19:33:38 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/white_concrete_powder": {
     "criteria": {
       "has_sand": "2020-07-03 15:48:59 +0200"
@@ -980,6 +1004,12 @@
   "minecraft:recipes/decorations/green_banner": {
     "criteria": {
       "has_green_wool": "2022-09-16 14:39:01 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_chest_boat": {
+    "criteria": {
+      "has_boat": "2022-10-05 19:33:38 +0200"
     },
     "done": true
   },
@@ -1409,6 +1439,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/mangrove_chest_boat": {
+    "criteria": {
+      "has_boat": "2022-10-05 19:33:38 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/glowstone": {
     "criteria": {
       "has_glowstone_dust": "2020-07-03 15:47:47 +0200"
@@ -1586,6 +1622,12 @@
   "minecraft:recipes/misc/coal": {
     "criteria": {
       "has_coal_block": "2022-01-12 19:39:11 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_chest_boat": {
+    "criteria": {
+      "has_boat": "2022-10-05 19:33:38 +0200"
     },
     "done": true
   },

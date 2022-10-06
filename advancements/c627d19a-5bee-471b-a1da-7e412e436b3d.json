@@ -1,0 +1,15 @@
+{
+  "minecraft:recipes/decorations/yellow_glazed_terracotta": {
+    "criteria": {
+      "has_yellow_terracotta": "2022-10-05 18:34:22 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2022-10-05 18:33:26 +0200"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

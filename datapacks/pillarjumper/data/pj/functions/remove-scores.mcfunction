@@ -16,6 +16,7 @@ scoreboard objectives remove powerups.effectpad
 scoreboard objectives remove powerups.bat.hit
 scoreboard objectives remove powerups.jumpPad
 scoreboard objectives remove game.event
+scoreboard objectives remove game.height
 scoreboard objectives remove event.imposter
 
 team remove powerup
