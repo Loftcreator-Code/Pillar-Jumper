@@ -18,6 +18,7 @@ scoreboard objectives remove powerups.jumpPad
 scoreboard objectives remove game.event
 scoreboard objectives remove game.height
 scoreboard objectives remove event.imposter
+scoreboard objectives remove game.block.rng
 
 team remove powerup
 team remove red

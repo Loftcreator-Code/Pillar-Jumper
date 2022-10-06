@@ -138,7 +138,6 @@ execute if score startani game.data matches 656 run title @a reset
 execute if score startani game.data matches 660 as @a[sort=random,limit=16] run tag @s add start-player
 execute if score startani game.data matches 660 as @a[tag=start-player] run scoreboard players reset @a ball.own
 execute if score startani game.data matches 660 as @a[tag=start-player] run effect give @s slow_falling 2 1 true
-execute if score startani game.data matches 660 as @a[tag=start-player] run effect give @s blindness 2 1 true
 execute if score startani game.data matches 660 as @a[tag=start-player] run gamemode adventure @s
 execute if score startani game.data matches 660 as @a[tag=start-player] run tag @s add playing
 execute if score startani game.data matches 660 as @a[tag=start-player] at @s run playsound ui.toast.challenge_complete player @s ~ ~ ~ 1 1
@@ -151,12 +150,11 @@ execute if score startani game.data matches 660 as @e[tag=items.marker] at @s ru
 execute if score startani game.data matches 660 as @e[tag=items.marker] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 minecraft:air replace lime_carpet
 execute if score startani game.data matches 660 as @e[tag=items.marker] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 minecraft:air replace white_carpet
 execute if score startani game.data matches 660 as @e[tag=items.marker] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 minecraft:air replace purple_carpet
-execute if score startani game.data matches 660 run function pj:game-engine/summon-marker
 execute if score startani game.data matches 660 run scoreboard objectives remove game.event
 execute if score startani game.data matches 660 run scoreboard objectives add game.event dummy
-execute if score startani game.data matches 660 if score teams.trigger game.config matches 1 as @a[team=!none] run tp @s -234 74 142
-execute if score startani game.data matches 660 if score teams.trigger game.config matches 0 as @a[tag=start-player] run tp @s -234 74 142
+execute if score startani game.data matches 660 if score teams.trigger game.config matches 1 as @a[team=!none] run tp @s -234 77 142
+execute if score startani game.data matches 660 if score teams.trigger game.config matches 0 as @a[tag=start-player] run tp @s -234 77 142
 execute if score startani game.data matches 660 if score day.trigger game.config matches 0 run function pj:time-modes/day
 execute if score startani game.data matches 660 if score day.trigger game.config matches 1 run function pj:time-modes/night
 execute if score startani game.data matches 660 run tag @a[tag=start-player] remove start-player
-execute if score startani game.data matches 660 run scoreboard players reset startani game.data
+execute if score startani game.data matches 660 run scoreboard players add count game.height 1

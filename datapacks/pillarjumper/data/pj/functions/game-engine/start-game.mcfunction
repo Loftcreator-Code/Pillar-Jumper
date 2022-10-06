@@ -62,12 +62,8 @@ execute as @a[scores={start=1..}] run scoreboard players reset @s start
 
 
 execute if score count game.height matches 1.. run scoreboard players add count game.height 1
-execute if score count game.height matches 2 run fill -260 33 173 -203 33 116 air replace minecraft:cobblestone
-execute if score count game.height matches 2 run fill -260 33 173 -203 33 116 air replace minecraft:stone
-execute if score count game.height matches 2 run fill -260 33 173 -203 33 116 air replace minecraft:andesite
-execute if score count game.height matches 2 run fill -260 33 173 -203 33 116 air replace minecraft:cobblestone_slab
-execute if score count game.height matches 2 run fill -260 33 173 -203 33 116 air replace minecraft:stone_slab
-execute if score count game.height matches 2 run fill -260 33 173 -203 33 116 air replace minecraft:andesite_slab
+execute if score count game.height matches 1.. if score day.trigger game.config matches 1 run function pj:time-modes/night
+execute if score count game.height matches 2 run fill -260 33 173 -203 33 116 air
 execute if score count game.height matches 2 run fill -203 56 116 -260 64 173 air
 execute if score count game.height matches 2 run fill -260 65 116 -204 73 173 air
 execute if score count game.height matches 5 run clone -203 25 173 -260 25 116 -260 55 116
@@ -79,13 +75,16 @@ execute if score count game.height matches 10 run clone -203 25 173 -260 30 116 
 execute if score count game.height matches 11 run clone -203 25 173 -260 31 116 -260 55 116
 execute if score count game.height matches 12 run clone -203 25 173 -260 32 116 -260 55 116
 execute if score count game.height matches 13 run clone -203 25 173 -260 33 116 -260 55 116
+execute if score count game.height matches 13 run function pj:game-engine/summon-marker
 execute if score count game.height matches 13 run execute as @e[tag=items.marker,tag=!height] run tag @s add height.set
 execute if score count game.height matches 13 run execute as @e[tag=items.marker,tag=!height] run tag @s add height.reset
 execute if score count game.height matches 13 run function pj:game-engine/set-height
 execute if score count game.height matches 14 run kill @e[type=armor_stand,tag=ball.dropped]
 execute if score count game.height matches 14 at @e[type=marker,tag=items.marker,sort=random,limit=1] run summon armor_stand ~ ~0.5 ~ {Tags:["ball.dropped"],Silent:1b,Marker:1b,Small:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:yellow_terracotta",Count:1b}],CustomNameVisible:1b,CustomName:'{"text": "BALL","bold": true, "color": "gold"}'}
+execute if score count game.height matches 14 run kill @e[type=item]
 execute if score count game.height matches 14 run scoreboard players set isRunning game.data 1
+execute if score count game.height matches 15.. run scoreboard players reset startani game.data
 execute if score count game.height matches 15.. run scoreboard players reset count game.height
 
-execute unless entity @e[tag=height.set] if entity @e[tag=height.reset] run clone -260 56 173 -203 63 116 -260 26 116
+execute unless entity @e[tag=height.set] if entity @e[tag=height.reset] run clone -260 63 173 -203 63 116 -260 33 116
 execute unless entity @e[tag=height.set] if entity @e[tag=height.reset] run tag @e[tag=height.reset] remove height.reset

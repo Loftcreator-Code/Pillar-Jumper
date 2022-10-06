@@ -16,6 +16,7 @@ scoreboard objectives add game.config dummy
 scoreboard objectives add game.event dummy
 scoreboard objectives add game.savegoal dummy
 scoreboard objectives add game.height dummy
+scoreboard objectives add game.block.rng dummy
 
 scoreboard objectives add start trigger
 scoreboard objectives add stop trigger
