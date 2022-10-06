@@ -168,3 +168,10 @@ summon marker -259 63 132 {Tags:["items.marker"]}
 summon marker -259 63 127 {Tags:["items.marker"]}
 summon marker -259 63 122 {Tags:["items.marker"]}
 summon marker -259 63 117 {Tags:["items.marker"]}
+
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ andesite_slab run tp @s ~ ~0.5 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ stone_slab run tp @s ~ ~0.5 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ cobblestone_slab run tp @s ~ ~0.5 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ andesite run tp @s ~ ~1 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ stone run tp @s ~ ~1 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ cobblestone run tp @s ~ ~1 ~

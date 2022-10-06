@@ -25,6 +25,7 @@ execute if score id game.event matches 5 run function pj:game-engine/events/pill
 
 
 execute if score count game.event matches 1800 run function pj:game-engine/reset-map
+execute if score count game.event matches 1800 run function pj:game-engine/summon-marker
 execute if score count game.event matches 1800 if score day.trigger game.config matches 1 run fill -260 56 116 -203 63 173 blackstone replace andesite
 execute if score count game.event matches 1800 if score day.trigger game.config matches 1 run fill -260 56 116 -203 63 173 polished_blackstone replace cobblestone
 execute if score count game.event matches 1800 if score day.trigger game.config matches 1 run fill -260 56 116 -203 63 173 crying_obsidian replace stone

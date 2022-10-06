@@ -86,7 +86,7 @@ execute if score count game.event matches 1770 as @e[tag=items.marker,sort=rando
 execute if score count game.event matches 1780 as @e[tag=items.marker,sort=random,limit=1] at @s run tag @s add del.marker
 execute if score count game.event matches 1790 as @e[tag=items.marker,sort=random,limit=1] at @s run tag @s add del.marker
 
-execute as @e[tag=del.marker] at @s if entity @e[tag=ball.dropped,distance=..2] run kill @e[tag=ball.dropped]
+execute as @e[tag=del.marker] at @s if entity @e[tag=ball.dropped,distance=..2] run tag @s remove del.marker
 tag @e[tag=del.marker] remove effectpad
 execute as @e[tag=del.marker] run scoreboard players add @s game.event 1
 execute as @e[tag=del.marker,scores={game.event=1..}] at @s run fill ~-1 ~ ~-1 ~1 ~ ~1 air
