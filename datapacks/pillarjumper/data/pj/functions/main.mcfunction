@@ -158,6 +158,5 @@ execute if score startani game.data matches 660 if score teams.trigger game.conf
 execute if score startani game.data matches 660 if score teams.trigger game.config matches 0 as @a[tag=start-player] run tp @s -234 74 142
 execute if score startani game.data matches 660 if score day.trigger game.config matches 0 run function pj:time-modes/day
 execute if score startani game.data matches 660 if score day.trigger game.config matches 1 run function pj:time-modes/night
-execute if score startani game.data matches 660 run scoreboard players set isRunning game.data 1
 execute if score startani game.data matches 660 run tag @a[tag=start-player] remove start-player
 execute if score startani game.data matches 660 run scoreboard players reset startani game.data

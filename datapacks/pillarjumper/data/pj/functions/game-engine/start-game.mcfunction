@@ -3,8 +3,6 @@ scoreboard players enable @a[tag=admin] stop
 scoreboard players reset @a[tag=!admin] start
 scoreboard players reset @a[tag=!admin] stop
 execute as @a[scores={start=1..}] run function pj:game-engine/summon-marker
-execute as @a[scores={start=1..}] run kill @e[type=armor_stand,tag=ball.dropped]
-execute as @a[scores={start=1..}] at @e[type=marker,tag=items.marker,sort=random,limit=1] run summon armor_stand ~ ~0.5 ~ {Tags:["ball.dropped"],Silent:1b,Marker:1b,Small:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:yellow_terracotta",Count:1b}],CustomNameVisible:1b,CustomName:'{"text": "BALL","bold": true, "color": "gold"}'}
 
 # TEAMS
 execute if entity @a[scores={start=1..}] if score teams.trigger game.config matches 1 run function pj:game-engine/join-random-team
@@ -27,7 +25,6 @@ execute if score isRunning game.data matches 0 if entity @a[scores={start=1..}] 
 execute if score isRunning game.data matches 0 if entity @a[scores={start=1..}] as @e[tag=items.marker] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 minecraft:air replace white_carpet
 execute if score isRunning game.data matches 0 if entity @a[scores={start=1..}] as @e[tag=items.marker] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 minecraft:air replace purple_carpet
 
-execute if score isRunning game.data matches 0 if entity @a[scores={start=1..}] run function pj:game-engine/summon-marker
 execute if score isRunning game.data matches 0 if entity @a[scores={start=1..}] run scoreboard objectives remove game.event
 execute if score isRunning game.data matches 0 if entity @a[scores={start=1..}] run scoreboard objectives add game.event dummy
 execute if score isRunning game.data matches 0 if entity @a[scores={start=1..}] as @a[tag=start-player] run scoreboard players reset @a ball.own
@@ -60,7 +57,6 @@ execute if entity @a[scores={start=1..}] if score day.trigger game.config matche
 
 execute as @a[scores={stop=1..}] run scoreboard players set isRunning game.data 0
 execute as @a[scores={stop=1..}] run scoreboard players reset @s stop
-execute as @a[scores={start=1..}] run scoreboard players set isRunning game.data 1
 execute as @a[scores={start=1..}] run scoreboard players reset @s start
 
 
@@ -86,6 +82,9 @@ execute if score count game.height matches 13 run clone -203 25 173 -260 33 116 
 execute if score count game.height matches 13 run execute as @e[tag=items.marker,tag=!height] run tag @s add height.set
 execute if score count game.height matches 13 run execute as @e[tag=items.marker,tag=!height] run tag @s add height.reset
 execute if score count game.height matches 13 run function pj:game-engine/set-height
+execute if score count game.height matches 14 run kill @e[type=armor_stand,tag=ball.dropped]
+execute if score count game.height matches 14 at @e[type=marker,tag=items.marker,sort=random,limit=1] run summon armor_stand ~ ~0.5 ~ {Tags:["ball.dropped"],Silent:1b,Marker:1b,Small:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:yellow_terracotta",Count:1b}],CustomNameVisible:1b,CustomName:'{"text": "BALL","bold": true, "color": "gold"}'}
+execute if score count game.height matches 14 run scoreboard players set isRunning game.data 1
 execute if score count game.height matches 15.. run scoreboard players reset count game.height
 
 execute unless entity @e[tag=height.set] if entity @e[tag=height.reset] run clone -260 56 173 -203 63 116 -260 26 116
