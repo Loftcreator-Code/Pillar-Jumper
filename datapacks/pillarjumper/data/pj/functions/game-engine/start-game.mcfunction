@@ -2,7 +2,7 @@ scoreboard players enable @a[tag=admin] start
 scoreboard players enable @a[tag=admin] stop
 scoreboard players reset @a[tag=!admin] start
 scoreboard players reset @a[tag=!admin] stop
-execute as @a[scores={start=1..}] run function pj:game-engine/summon-marker
+
 
 # TEAMS
 execute if entity @a[scores={start=1..}] if score teams.trigger game.config matches 1 run function pj:game-engine/join-random-team

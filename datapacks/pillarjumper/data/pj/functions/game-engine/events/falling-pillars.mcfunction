@@ -90,8 +90,8 @@ execute as @e[tag=del.marker] at @s if entity @e[tag=ball.dropped,distance=..2] 
 tag @e[tag=del.marker] remove effectpad
 execute as @e[tag=del.marker] run scoreboard players add @s game.event 1
 execute as @e[tag=del.marker,scores={game.event=1..}] at @s run fill ~-1 ~ ~-1 ~1 ~ ~1 air
-execute as @e[tag=del.marker,scores={game.event=5..}] at @s run fill ~-1 ~ ~-1 ~1 ~-1 ~1 air
-execute as @e[tag=del.marker,scores={game.event=10..}] at @s run fill ~-1 ~ ~-1 ~1 ~-2 ~1 air
-execute as @e[tag=del.marker,scores={game.event=15..}] at @s run fill ~-1 ~ ~-1 ~1 ~-3 ~1 air
-execute as @e[tag=del.marker,scores={game.event=20..}] at @s run fill ~-1 56 ~-1 ~1 ~ ~1 air
+execute as @e[tag=del.marker,scores={game.event=5..}] at @s run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 air
+execute as @e[tag=del.marker,scores={game.event=10..}] at @s run fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 air
+execute as @e[tag=del.marker,scores={game.event=15..}] at @s run fill ~-1 ~-3 ~-1 ~1 ~-3 ~1 air
+execute as @e[tag=del.marker,scores={game.event=20..}] at @s run fill ~-1 56 ~-1 ~1 ~-4 ~1 air
 execute as @e[tag=del.marker,scores={game.event=20..}] at @s run kill @s

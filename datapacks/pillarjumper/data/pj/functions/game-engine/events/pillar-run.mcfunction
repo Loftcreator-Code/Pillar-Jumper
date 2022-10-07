@@ -26,17 +26,17 @@ execute as @e[tag=del.marker] run scoreboard players add @s game.event 1
 execute as @e[tag=del.marker,scores={game.event=1..30}] at @s run fill ~-1 56 ~-1 ~1 ~ ~1 bedrock replace andesite
 execute as @e[tag=del.marker,scores={game.event=1..30}] if score day.trigger game.config matches 1 at @s run fill ~-1 56 ~-1 ~1 ~ ~1 shroomlight replace polished_blackstone
 execute as @e[tag=del.marker,scores={game.event=20..}] at @s run fill ~-1 ~ ~-1 ~1 ~ ~1 air
-execute as @e[tag=del.marker,scores={game.event=25..}] at @s run fill ~-1 ~ ~-1 ~1 ~-1 ~1 air
-execute as @e[tag=del.marker,scores={game.event=30..}] at @s run fill ~-1 ~ ~-1 ~1 ~-2 ~1 air
-execute as @e[tag=del.marker,scores={game.event=35..}] at @s run fill ~-1 ~ ~-1 ~1 ~-3 ~1 air
-execute as @e[tag=del.marker,scores={game.event=40..}] at @s run fill ~-1 56 ~-1 ~1 ~ ~1 air
+execute as @e[tag=del.marker,scores={game.event=25..}] at @s run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 air
+execute as @e[tag=del.marker,scores={game.event=30..}] at @s run fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 air
+execute as @e[tag=del.marker,scores={game.event=35..}] at @s run fill ~-1 ~-3 ~-1 ~1 ~-3 ~1 air
+execute as @e[tag=del.marker,scores={game.event=40..}] at @s run fill ~-1 56 ~-1 ~1 ~-4 ~1 air
 
 execute as @e[tag=del.marker,scores={game.event=95..}] at @s run clone ~1 26 ~1 ~-1 28 ~-1 ~-1 56 ~-1
-execute as @e[tag=del.marker,scores={game.event=96..}] at @s run clone ~1 26 ~1 ~-1 29 ~-1 ~-1 56 ~-1
-execute as @e[tag=del.marker,scores={game.event=97..}] at @s run clone ~1 26 ~1 ~-1 30 ~-1 ~-1 56 ~-1
-execute as @e[tag=del.marker,scores={game.event=98..}] at @s run clone ~1 26 ~1 ~-1 31 ~-1 ~-1 56 ~-1
-execute as @e[tag=del.marker,scores={game.event=99..}] at @s run clone ~1 26 ~1 ~-1 32 ~-1 ~-1 56 ~-1
-execute as @e[tag=del.marker,scores={game.event=100..}] at @s run clone ~1 26 ~1 ~-1 33 ~-1 ~-1 56 ~-1
+execute as @e[tag=del.marker,scores={game.event=96..}] at @s run clone ~1 29 ~1 ~-1 29 ~-1 ~-1 59 ~-1
+execute as @e[tag=del.marker,scores={game.event=97..}] at @s run clone ~1 30 ~1 ~-1 30 ~-1 ~-1 60 ~-1
+execute as @e[tag=del.marker,scores={game.event=98..}] at @s run clone ~1 31 ~1 ~-1 31 ~-1 ~-1 61 ~-1
+execute as @e[tag=del.marker,scores={game.event=99..}] at @s run clone ~1 32 ~1 ~-1 32 ~-1 ~-1 62 ~-1
+execute as @e[tag=del.marker,scores={game.event=100..}] at @s run clone ~1 33 ~1 ~-1 33 ~-1 ~-1 63 ~-1
 
 execute as @e[tag=del.marker,scores={game.event=95..102}] if score day.trigger game.config matches 1 run fill -260 56 116 -203 63 173 blackstone replace andesite
 execute as @e[tag=del.marker,scores={game.event=95..102}] if score day.trigger game.config matches 1 run fill -260 56 116 -203 63 173 polished_blackstone replace cobblestone
