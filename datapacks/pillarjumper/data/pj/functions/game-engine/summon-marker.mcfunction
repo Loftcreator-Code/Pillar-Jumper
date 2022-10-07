@@ -175,3 +175,10 @@ execute as @e[tag=items.marker] at @s if block ~ ~ ~ cobblestone_slab run tp @s 
 execute as @e[tag=items.marker] at @s if block ~ ~ ~ andesite run tp @s ~ ~1 ~
 execute as @e[tag=items.marker] at @s if block ~ ~ ~ stone run tp @s ~ ~1 ~
 execute as @e[tag=items.marker] at @s if block ~ ~ ~ cobblestone run tp @s ~ ~1 ~
+
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ blackstone_slab run tp @s ~ ~0.5 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ polished_blackstone_brick_slab run tp @s ~ ~0.5 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ polished_blackstone_slab run tp @s ~ ~0.5 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ blackstone run tp @s ~ ~1 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ polished_blackstone run tp @s ~ ~1 ~
+execute as @e[tag=items.marker] at @s if block ~ ~ ~ crying_obsidian run tp @s ~ ~1 ~
