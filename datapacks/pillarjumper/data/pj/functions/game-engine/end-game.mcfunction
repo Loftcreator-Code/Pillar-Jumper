@@ -11,22 +11,37 @@ execute as @a[scores={game.info.count=80..}] run scoreboard players reset @s gam
 
 # END
 execute as @a if score endless.trigger game.config matches 0 if score @s game.info = Goal game.info run tag @s add game.win
-execute as @a[tag=game.win] run scoreboard players operation goal game.savegoal = Goal game.info
-execute as @a[tag=game.win] run kill @e[type=armor_stand,tag=ball.dropped]
-execute as @a[tag=game.win] if score teams.trigger game.config matches 0 run tp @a -281 69 140
-execute as @a[tag=game.win] if score teams.trigger game.config matches 1 run tp @a[team=!none] -281 69 140
+execute if entity @a[tag=game.win] run scoreboard players operation goal game.savegoal = Goal game.info
+execute if entity @a[tag=game.win] run kill @e[type=armor_stand,tag=ball.dropped]
+execute if entity @a[tag=game.win] if score teams.trigger game.config matches 0 run tp @a -281 69 140
+execute if entity @a[tag=game.win] if score teams.trigger game.config matches 1 run tp @a[team=!none] -281 69 140
 execute as @a[tag=game.win] run title @a title {"selector":"@s","color":"gold"}
 execute as @a[tag=game.win] run title @a subtitle {"text": "won the game!","color": "light_purple"}
 execute as @a[tag=game.win] at @s run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 1
 execute as @a[tag=game.win] at @s run playsound entity.firework_rocket.large_blast player @a ~ ~ ~ 1 1
-execute as @a[tag=game.win] run scoreboard players reset * game.info
-execute as @a[tag=game.win] run scoreboard players operation Goal game.info = goal game.savegoal
-execute as @a[tag=game.win] run scoreboard players reset goal game.savegoal
-execute as @a[tag=game.win] run scoreboard players set isRunning game.data 0
-execute as @a[tag=game.win] run clear @a
-execute as @a[tag=game.win] run kill @e[type=item]
+execute if entity @a[tag=game.win] run scoreboard players reset * game.info
+execute if entity @a[tag=game.win] run scoreboard players operation Goal game.info = goal game.savegoal
+execute if entity @a[tag=game.win] run scoreboard players reset goal game.savegoal
+execute if entity @a[tag=game.win] run scoreboard players set isRunning game.data 0
+execute if entity @a[tag=game.win] run clear @a
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace stone
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace stone_slab
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace andesite
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace andesite_slab
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace cobblestone_slab
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace cobblestone
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace blackstone
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace polished_blackstone
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace crying_obsidian
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace blackstone_slab
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace polished_blackstone_slab
+execute if entity @a[tag=game.win] run fill -203 56 116 -260 64 173 air replace polished_blackstone_brick_slab
+execute if entity @a[tag=game.win] run fill -262 74 114 -201 81 175 air
+execute if entity @a[tag=game.win] run fill -260 65 116 -204 73 173 air
+execute if entity @a[tag=game.win] run kill @e[tag=ball.dropped]
+execute if entity @a[tag=game.win] run kill @e[type=item]
 execute as @a[tag=game.win] run tag @s remove game.win
-execute as @a[tag=game.win] run team leave @a
+execute if entity @a[tag=game.win] run team leave @a
 execute as @a[tag=game.win] run tag @s remove playing
 execute as @a[tag=game.win] run scoreboard players reset @a ball.own
 

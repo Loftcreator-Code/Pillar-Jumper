@@ -47,6 +47,21 @@ execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] a
 execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run team leave @a
 execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run tag @a remove playing
 execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run clear @a
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace stone
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace stone_slab
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace andesite
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace andesite_slab
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace cobblestone_slab
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace cobblestone
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace blackstone
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace polished_blackstone
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace crying_obsidian
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace blackstone_slab
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace polished_blackstone_slab
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -203 56 116 -260 64 173 air replace polished_blackstone_brick_slab
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -262 74 114 -201 81 175 air
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run fill -260 65 116 -204 73 173 air
+execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run kill @e[tag=ball.dropped]
 execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run kill @e[type=item]
 execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run scoreboard players reset @a ball.own
 execute if score isRunning game.data matches 1 if entity @a[scores={stop=1..}] run scoreboard players operation Goal game.info = goal game.savegoal

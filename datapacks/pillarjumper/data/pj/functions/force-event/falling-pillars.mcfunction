@@ -1,0 +1,1 @@
+execute unless score id game.event matches 1.. run scoreboard players set id game.event 2

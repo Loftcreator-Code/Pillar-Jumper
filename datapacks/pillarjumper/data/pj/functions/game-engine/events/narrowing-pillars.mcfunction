@@ -23,10 +23,14 @@ execute if score count game.event matches 1218 run title @a subtitle [{"text":"c
 execute if score count game.event matches 1201 as @a at @s run playsound item.goat_horn.sound.0 player @s ~ ~ ~ 1 1
 execute if score count game.event matches 1201 run bossbar set events name {"text":"Narrowing Pillars","color": "light_purple"}
 execute if score count game.event matches 1201 run bossbar set events color pink
-execute if score count game.event matches 1220 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=30..] at @s run fill ~-1 56 ~-1 ~1 ~ ~1 air
-execute if score count game.event matches 1230 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=25..] at @s run fill ~-1 56 ~-1 ~1 ~ ~1 air
-execute if score count game.event matches 1240 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=20..] at @s run fill ~-1 56 ~-1 ~1 ~ ~1 air
-execute if score count game.event matches 1250 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=15..] at @s run fill ~-1 56 ~-1 ~1 ~ ~1 air
-execute if score count game.event matches 1250 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=15..] at @s run kill @s
-execute if score count game.event matches 1250 run kill @e[type=item]
-execute if score count game.event matches 1250 positioned -231.0 63 145.0 if entity @e[tag=ball.dropped,distance=15..] run kill @e[tag=ball.dropped]
+execute if score count game.event matches 1220 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=30..] run tag @s add del.marker
+execute if score count game.event matches 1230 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=25..] run tag @s add del.marker
+execute if score count game.event matches 1240 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=20..] run tag @s add del.marker
+execute if score count game.event matches 1250 positioned -231.0 63 145.0 as @e[tag=items.marker,distance=15..] run tag @s add del.marker
+
+execute as @e[tag=del.marker] at @s as @e[tag=ball.dropped,distance=..2] run kill @s
+tag @e[tag=del.marker] remove effectpad
+execute as @e[tag=del.marker] run scoreboard players add @s game.event 1
+execute as @e[tag=del.marker,scores={game.event=1..}] at @s run fill ~-1 ~ ~-1 ~1 ~ ~1 air
+execute as @e[tag=del.marker,scores={game.event=1..}] at @s run fill ~-1 ~-1 ~-1 ~1 56 ~1 air
+execute as @e[tag=del.marker,scores={game.event=2..}] at @s run kill @s
