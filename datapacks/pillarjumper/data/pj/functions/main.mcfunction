@@ -39,7 +39,7 @@ kill @e[nbt={Item:{tag:{RNG:1b}}}]
 
 #NO STUCK
 execute as @a at @s unless block ~ ~1 ~ air run scoreboard players add @s game.nostuck 1
-execute as @a[scores={game.nostuck=80..}] at @s unless block ~ ~1 ~ air run tp @s ~ ~3 ~
+execute as @a[scores={game.nostuck=80..}] at @s unless block ~ ~1 ~ #wall_signs unless block ~ ~1 ~ air run tp @s ~ ~3 ~
 execute as @a[scores={game.nostuck=1..}] at @s if block ~ ~1 ~ air run scoreboard players reset @s game.nostuck
 
 #Join Game

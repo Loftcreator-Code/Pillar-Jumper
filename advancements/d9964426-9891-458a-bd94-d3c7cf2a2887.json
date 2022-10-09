@@ -47,6 +47,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2022-10-08 17:39:41 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_stairs_from_waxed_oxidized_cut_copper_stonecutting": {
     "criteria": {
       "has_waxed_oxidized_cut_copper": "2022-02-05 21:12:59 +0100"
@@ -74,6 +80,12 @@
   "minecraft:recipes/building_blocks/lime_concrete_powder": {
     "criteria": {
       "has_gravel": "2022-02-05 21:12:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2022-10-08 17:39:41 +0200"
     },
     "done": true
   },
@@ -456,5 +468,11 @@
     },
     "done": true
   },
-  "DataVersion": 2865
+  "minecraft:recipes/brewing/brewing_stand": {
+    "criteria": {
+      "has_blaze_rod": "2022-10-08 17:39:41 +0200"
+    },
+    "done": true
+  },
+  "DataVersion": 3120
 }
